@@ -1,21 +1,23 @@
+// this is here is a happy case use of code blocks 
+
 fn main() {
-    print_num_to(10);
+    let x = 10;
 
-    // if is_even(30){
-    //     println!("It is even")
-    // }
-}
+    {
+        let y = 5 ;
 
-fn print_num_to(num:u32){
-    for n in 1..num+1{
-        if is_even(n){
-            println!("{} is even",n);
-        }else{
-            println!("{} is odd",n);
-        }
+        println!("x:{}, y:{}",x,y);
     }
 }
 
-fn is_even(num:u32)->bool{
-    return num%2 ==0;
-}
+// below will throw an exception that y is not defined
+// fn main() {
+//     let x = 10;
+
+//     {
+//         let y = 5 ;
+
+//     }
+//     println!("x:{}, y:{}",x,y);
+
+// }
